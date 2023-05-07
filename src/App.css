@@ -1,0 +1,86 @@
+#root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+.homelink, .wea_link, .statlink{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  transition: all .3s;
+
+}
+
+@media (prefers-reduced-motion: no-preference) {
+
+}
+
+/* LOADING */
+
+.circular_bg{
+  width: 1.5em;
+  height: 1.5em;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top : 50%;
+  transform: translate(-50% , -50%);
+  border-radius:50% ;
+  animation: bg 1s infinite ease-in;
+}
+.circular{
+  position: absolute;
+  left: 41%;    
+  top : 35%;
+  animation: Rotate infinite 1s alternate;
+}
+
+
+
+@keyframes Rotate{
+
+  to {
+      transform-origin: center;
+      transform : rotate(180deg)
+  }
+}
+
+@keyframes bg{
+  0%{
+    
+    left: 50%;
+    top : 50%;
+
+  }
+  19%{
+    top :56%;
+    left : 50%
+  }
+  
+  20% {
+      top: 50%;
+      left: 50%;
+      width: 1.5em;
+      height: 1.5em;
+      border-radius: 50%;
+    }
+    70% {
+      top: 50%;
+      left: 50%;
+      width: 100vw;
+      height: 100vw;
+      border-radius: 50%;
+    }
+    100% {
+      top : 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      border-radius:0%;
+    }
+ 
+}
